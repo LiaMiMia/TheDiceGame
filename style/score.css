@@ -1,0 +1,35 @@
+.score{
+    font-family: 'Lato', sans-serif;
+    font-family: 'Press Start 2P', cursive;
+}
+
+.underTheLight, .BackToShadow{
+    /* padding: 1rem; fais dépasser le truc et fous la mede*/ 
+    border-radius: 10%;
+    height: 95%;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+}
+
+.underTheLight{
+    
+    animation: blink-1 0.6s both;
+}
+
+.scoreTour{
+    height: 35%;
+}
+
+.playerName{
+    height: 17.5%;
+}
+.scoreGlobal{
+    height: 17.5%;
+}
+
+
+
+  

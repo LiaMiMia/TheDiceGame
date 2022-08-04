@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- balises méta référencement -->
+    <title>Règles du Jeu</title>
+    <meta name="Content-Type" content="UTF-8">
+    <meta name="Content-Language" content="fr">
+    <meta name="Subject" content="Règles du Jeu">
+    <meta name="Author" content="Elea MANE">
+    <meta name="Rating" content="general">
+    <meta name="Distribution" content="global">
+    <meta name="Category" content="games">
+    
+    <link rel="stylesheet" href="../style/color.css">
+    <link rel="stylesheet" href="../style/styleBasic.css">
+    <link rel="stylesheet" href="../style/rdj.css">
+
+    <!-- font for scores  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;700;900&family=Press+Start+2P&display=swap" rel="stylesheet">
+
+    <!-- icone haut de page -->
+   <link rel="icon" href="../img/dice.png">
+    <title>Règles du jeu</title>
+</head>
+<body>
+    <main>
+        <h2>Règles du jeu</h2>
+        <p>
+            Le jeu comprend 2 joueurs sur un seul et même écran.<br><br>
+            Chaque joueur possède un score temporaire (ROUND) et un score global (GLOBAL).<br><br>
+            À chaque tour, le joueur a son ROUND initialisé à 0 et peut lancer un dé autant de fois qu'il le souhaite. Le
+            résultat d’un lancer est ajouté au ROUND.
+        </p>
+        <p>
+            Lors de son tour, le joueur peut décider à tout moment de:
+            <ul>
+                <li>Cliquer sur l’option <div id="hold" class="start-btn hold">
+                    Hold
+                </div>, qui permet d’envoyer les points du ROUND vers le GLOBAL. Ce sera alors le
+                    tour de l’autre joueur.</li>
+                    <br>
+                <li>Lancer le dé. S’il obtient un 1, son score ROUND est perdu et c’est la fin de son tour.
+                    Le premier joueur qui atteint les 100 points sur global gagne le jeu.</li>
+            </ul>
+        </p>
+    </main>
+    <div><a id="retour" class="start-btn hold" href="../index.html">Retour</a>
+    </div>
+        
+    </div>
+
+</body>
+</html>

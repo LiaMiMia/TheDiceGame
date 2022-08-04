@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- balises meta referencement -->
+    <title>jeu de dés</title>
+<meta name="Content-Type" content="UTF-8">
+<meta name="Content-Language" content="fr">
+<meta name="Author" content="MANE Elea">
+<meta name="Revisit-After" content="15 days">
+<meta name="Rating" content="general">
+<meta name="Distribution" content="global">
+<meta name="Category" content="games">
+<meta name="DC.Content-Type" content="UTF-8">
+<meta name="DC.Content-Language" content="fr">
+<meta name="DC.Author" content="MANE Elea">
+<meta name="DC.Revisit-After" content="15 days">
+<meta name="DC.Rating" content="general">
+<meta name="DC.Distribution" content="global">
+<meta name="DC.Category" content="games">
+    
+    <!-- remove console erro favico -->
+    <link rel="shortcut icon" href="#">
+
+    <!-- css -->
+    <link rel="stylesheet" href="style/styleAnim.css">
+    <link rel="stylesheet" href="style/star.css">
+    <link rel="stylesheet" href="style/styleBasic.css">
+    <link rel="stylesheet" href="style/score.css">
+    <link rel="stylesheet" href="style/color.css">
+    <link rel="stylesheet" href="style/mediaQueries.css">
+
+     <!-- font for scores  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;700;900&family=Press+Start+2P&display=swap" rel="stylesheet">
+
+    <!-- font for messages -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;700;900&family=Press+Start+2P&display=swap" rel="stylesheet">
+
+    <link rel="icon" href="img/dice.png">
+
+</head>
+
+    
+    <body id="body">
+        <main>
+            
+            
+            <div class="divMain">
+                <div id= "affichagesDy" class="divMain-child affichages-dynamiques">
+                    <div id="message" class="affichages-dynamiques-child">Bienvenu au jeu de dés !</div>
+                </div>
+                <div id="playersBlock" class="by2 divMain-child playersBlock">
+                </div>
+                
+                <div id="deEvent"></div>
+                <div id="hold" class="start-btn hold">
+                    Hold
+                </div>
+            </div>
+            <div id="xtraBox" class="xtraBox">
+                <a href="html/rdj.html">Règles du jeu</a>
+                <a onclick="window.location.href=window.location.href">Recommencer</a>
+                <a href="html/mentionsLegales.html"> Mentions légales</a>
+                <div id="hideMenuBtn" class="video-game-button-hide">
+                    -
+                </div>
+            </div>
+            <div id="menuBtn" class="video-game-button" >
+                +
+            </div>
+        </main>
+        <form action="" id="startForm">
+            <label for="NomJ1">Nom du joueur 1 : </label>
+            <input type="text" id="NomP1" placeholder="Nom">
+            <label for="NomJ2">Nom du joueur 2 : </label>
+            <input type="text" id="NomP2" placeholder="Nom">
+            <button id="Commencer" type="button">Commencer</button>
+        </form>
+
+        
+    </body>
+        
+        
+        <script src="javaScript/dé-3d.js" type="module"></script>
+        <script src="./javaScript/var/varDice.js" type="module"></script>
+        <script src="./javaScript/var/varDomEl.js" type="module"></script>
+        <script src="./javaScript/var/varThree.js" type="module"></script>
+        <script src="./javaScript/functions/functionCreateDice.js" type="module"></script>
+        <script src="./javaScript/functions/functionsDice.js" type="module"></script>
+        <script src="./javaScript/" type="module"></script>
+        <script src="./javaScript/functions/functionsWinner.js" type="module"></script>
+        <script src="./javaScript/class/Player.js" type="module"></script>
+        <script src="./javaScript/evListenner/menuBtn.js" type="module"></script>
+    
+
+</html>

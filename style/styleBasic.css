@@ -1,0 +1,234 @@
+/* mise en place générale */
+html, body{
+    height: 100%;
+    width: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
+} 
+
+main{
+    position: absolute;
+    height: 95%;
+    width: 92%;
+    top: 2.5%;
+    bottom: 2.5%;
+    
+}
+
+#NomP2{
+    margin-bottom: 20px;
+}
+
+#NomP1, #NomP2{
+    width: 60%;
+    height: 10%;
+    border-radius: 10% 10% 10% 10% / 10% 10% 10% 10%;
+}
+
+*{
+    font-family: 'Press Start 2p';
+    text-align: center;
+    
+    /* border: solid black 1px; */
+}
+
+body{
+    margin:0;
+    padding: 0;
+    
+}
+
+h2, h3, p{
+    display: flex;
+    justify-content: center
+}
+
+a{
+    /* text-decoration: none; */
+    display: flex;
+}
+
+a:hover{
+    color: var(--third-color);
+}
+
+#deEvent{
+    position: absolute;
+    bottom: 30%;
+    width: 40%;
+    height: 50%;
+    z-index: 2;
+    left: 30%;
+    box-sizing: border-box;
+}
+
+canvas{
+    display: block;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+}
+/* disposition des éléments les uns par rapport aux autres */
+/* hauteur des div principales  */
+.divHB{
+    height: 16.5%;
+    position: absolute;
+}
+
+.dubleButton{
+    bottom: 5%;
+}
+
+.divMain, .playerBlock{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+/* hauteur des divs à 50% */
+.affichages-dynamiques-child{
+    height: 40%;
+}
+
+body{
+    background-color: #fff5d2;
+}
+.affichages-dynamiques{
+    z-index: 2;
+    background: #fff5d2;
+    position: absolute;
+    top: 5%;
+    padding: 5%;
+    border-radius: 10%;
+    text-align: center;
+    left: 50%;
+    transform: translateX(-50%);
+    
+}
+
+/* dispo des éléments à afficher par deux à l'horizontale */
+.by2{
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: space-around;
+    width: 100%;
+    align-items: center;
+}
+
+/* dispo des éléments à afficher par deux à la verticale */
+.affichages-dynamiques-child, .div-winner-text{
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    align-items: center;
+    justify-content: center;
+}
+
+/* ajustements individuels */
+.playersBlock{
+    height: 100%;
+    overflow: hidden;
+}
+
+.divMain{
+    max-width: 808px;
+    margin: 0 auto;
+    height: 100%;
+    width: 100%;
+}
+
+body, .affichages-dynamiques, .div-winner{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.div-winner{
+    color: var(--main-color); 
+}
+
+.playerBlock{
+    padding: 10px;
+}
+
+.div-winner{
+    height: 100%;
+    justify-content: space-around;
+}
+
+#playerName{
+    margin:0;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+h3{
+    margin:0;
+}
+
+#message{
+    height: 100%;
+    width: 100%; 
+    font-family: 'Lato', sans-serif;
+    font-size: 25px;
+}
+
+.score{
+    background-color: var(--fourth-color);
+    width: 50%;
+    height: 5%;
+    border-radius: 10% 10% 10% 10% / 10% 10% 10% 10%;
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+   
+}
+
+#scoreGlobal0, #scoreGlobal1{
+    color: var(--second-color);
+}
+
+#ScoreTour0, #ScoreTour1{
+    height: 60%;
+    color: var(--main-color);
+}
+.scoreTourDiv{
+    height: 20%;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: space-evenly;
+}
+
+/* (A) WRONG ORIENTATION - SHOW MESSAGE HIDE CONTENT */
+/* @media only screen and (orientation:landscape) {
+    #turn { display:block; }
+    .container { display:none; }
+  }
+   
+  /* (B) CORRECT ORIENTATION - SHOW CONTENT HIDE MESSAGE */
+  /*
+  @media only screen and (orientation:portrait) {
+    #turn { display:none; }
+    .container { display:flex; }
+  } */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

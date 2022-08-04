@@ -1,0 +1,115 @@
+a{
+    color: var(--main-color)
+}
+
+.video-game-button {
+    line-height: 1.5em;
+    width: 2em;
+    height: 2em;
+    border-radius: .75em;
+    padding-left: 5px;
+    z-index:2;
+    position: absolute;
+    display: none
+}
+
+@media screen and (max-width: 1267px){
+    .video-game-button {
+            bottom: 50%;
+            left: 5px ;
+            transform: translateY(-50%);
+    }
+
+    .video-game-button:active{
+        box-shadow: none;
+        bottom: 49.5%;
+    }
+    
+    
+}
+
+
+
+@media screen and (max-width: 1030px){
+/* Rédigez vos propriétés CSS ici */
+.video-game-button {
+    bottom: 10%;
+    left: 10%;
+}
+
+.video-game-button:active{
+    box-shadow: none;
+    bottom: 10.5%;
+    
+}
+
+.start-btn:active  {
+        box-shadow: none;
+        /* //position: relative; */
+        bottom: 12.8%;
+}
+
+.affichages-dynamiques{
+    width: 150px;
+    height: 300px;
+}
+
+}
+
+.xtraBox{
+    display: none;
+    height: 50%; 
+}
+#startForm{
+    display: flex;
+    z-index: 2;
+    color: var(--main-color);
+    height: 80%;
+}
+
+.xtraBox, #startForm{
+    position: absolute;
+    background-color: var(--fourth-color);
+    top: 50%;
+    left: 50%;
+    padding: 5%;
+    border-radius: 10%;
+    border: solid var(--second-color) 3px;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    transform: translate(-50%, -50%);
+}
+
+@media screen and (min-device-width: 1267px){ 
+    .xtraBox{
+        display: flex !important;
+        
+    }
+    .xtraBox{
+        top: 50%;
+        height: 50%;
+        transform: translate(-10%,-50%);
+        left: 0;
+        width: 70px;
+        background-color: var(--main-color);
+        
+    }
+
+    .affichages-dynamiques{
+        width: 300px;
+        height: 150px;
+    }
+    .video-game-button{
+        opacity: 0;
+    }
+
+    a{
+        color: var(--third-color);
+    }
+}
+
+.affichages-dynamiques{
+    width: 200px;
+    height: 100px;
+}

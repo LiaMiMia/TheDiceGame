@@ -1,0 +1,32 @@
+html, body{
+  height: 100%;
+  width: 100%;
+  box-sizing: border-box;
+} 
+
+h2{
+  font-family: 'Lato', sans-serif;
+  font-size: 30px;
+  line-height: 25px;
+}
+
+main{
+  position: absolute;
+  height: 95%;
+  width: 92%;
+  top: 2.5%;
+  bottom: 2.5%;
+  overflow-y: scroll;
+  margin: 5px;
+  margin-left: 50%;
+  transform: translateX(-50%);
+}
+
+body{
+  margin: 0;
+  padding: 0;
+}
+
+#retour{
+  font-family: 'Press Start 2p';
+}
