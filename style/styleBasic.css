@@ -131,6 +131,10 @@ body{
     overflow: hidden;
 }
 
+#affichagesDy{
+    display: none;
+}
+
 .divMain{
     max-width: 808px;
     margin: 0 auto;

@@ -42,6 +42,7 @@ import {
   Form,
   commencer,
   body,
+  affichagesDy,
 } from './var/varDomEl.js';
 
 import {
@@ -138,6 +139,7 @@ commencer.addEventListener('click', () => {
   message.innerHTML = `Bienvenue au jeu de dé ! <br> C'est à ${playersArray[index].name} de commencer !`;
   setElementClassName();
   formeInvisible(forme);
+  affichagesDy.style.display = 'flex';
   Form.style.display = 'none';
   menuBtn.style.display = 'inline-block';
 
