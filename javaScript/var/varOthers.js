@@ -1,4 +1,4 @@
-const musicAnim = new Audio('../sounds/seven-dices.mp3');
+const musicAnim = new Audio('https://github.com/LiaMiMia/TheDiceGame/blob/main/sounds/seven-dices.mp3?raw=true');
 const cameraZPosition = 9;
 
 const animationDuration = 2000;

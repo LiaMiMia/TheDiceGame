@@ -145,10 +145,10 @@ commencer.addEventListener('click', () => {
 });
 
 function winner(id) {
-  if (Number(playersArray[id].globalScore) >= 10) {
+  if (Number(playersArray[id].globalScore) >= 100) {
     const GlobalScoreHtml = document.getElementById(`scoreGlobal${id}`);
     GlobalScoreHtml.className = 'endAnimation';
-    const music = new Audio('../sounds/success-fanfare-trumpets-6185.mp3');
+    const music = new Audio('https://github.com/LiaMiMia/TheDiceGame/blob/main/sounds/success-fanfare-trumpets-6185.mp3?raw=true');
     music.play();
     music.loop = false;
     setTimeout(() => {
@@ -212,7 +212,7 @@ hold.addEventListener('click', () => {
   if (Number(playersArray[index].currentScore) !== 0) {
     playersArray[index].setGlobalScore();
     playersArray[index].resetCurrentScore();
-    const music = new Audio('../sounds/cha-ching.mp3');
+    const music = new Audio('https://github.com/LiaMiMia/TheDiceGame/blob/main/sounds/cha-ching.mp3?raw=true');
     music.play();
     // music.loop =false;
     winner(index);
