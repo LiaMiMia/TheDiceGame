@@ -10,6 +10,7 @@ import {
   hold,
 } from '../var/varDomEl.js';
 
+// gestion des boutons du menu de navigation
 menuBtn.addEventListener('click', () => {
   menuBtn.style.display = 'none';
   hideMenuBtn.style.display = 'block';

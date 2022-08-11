@@ -24,42 +24,37 @@ a{
         box-shadow: none;
         bottom: 49.5%;
     }
-    
-    
 }
-
-
 
 @media screen and (max-width: 1030px){
-/* Rédigez vos propriétés CSS ici */
-.video-game-button {
-    bottom: 10%;
-    left: 10%;
-}
+    .video-game-button {
+        bottom: 10%;
+        left: 10%;
+    }
 
-.video-game-button:active{
-    box-shadow: none;
-    bottom: 10.5%;
-    
-}
-
-.start-btn:active  {
+    .video-game-button:active{
         box-shadow: none;
-        /* //position: relative; */
-        bottom: 12.8%;
-}
+        bottom: 10.5%;
+        
+    }
 
-.affichages-dynamiques{
-    width: 150px;
-    height: 300px;
-}
+    .start-btn:active  {
+            box-shadow: none;
+            /* //position: relative; */
+            bottom: 12.8%;
+    }
 
+    .affichages-dynamiques{
+        width: 150px;
+        height: 300px;
+    }
 }
 
 .xtraBox{
     display: none;
     height: 50%; 
 }
+
 #startForm{
     display: flex;
     z-index: 2;
@@ -84,8 +79,8 @@ a{
 @media screen and (min-device-width: 1267px){ 
     .xtraBox{
         display: flex !important;
-        
     }
+
     .xtraBox{
         top: 50%;
         height: 50%;
@@ -93,13 +88,13 @@ a{
         left: 0;
         width: 70px;
         background-color: var(--main-color);
-        
     }
 
     .affichages-dynamiques{
         width: 300px;
         height: 150px;
     }
+    
     .video-game-button{
         opacity: 0;
     }

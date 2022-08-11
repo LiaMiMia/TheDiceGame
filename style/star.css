@@ -1,5 +1,4 @@
-.button-star{
-    
+/* .button-star{
     width: 50%;
     height: 50%;
 
@@ -11,11 +10,7 @@
     
 }
 
-a{
-    object-fit: contain;
-    text-decoration: none;
-    display: flex;
-}
+
 
 .button{
     height: 50%;
@@ -33,5 +28,5 @@ a{
     50%{transform: rotate(180deg);}
     75%{transform: rotate(270deg);}
     100%{transform: rotate(0deg);}
-}
+} */
 

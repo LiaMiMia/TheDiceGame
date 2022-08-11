@@ -27,7 +27,6 @@
         border-radius: 7px;
         font-family: 'Press Start 2p';
         justify-content: space-around;
-        
         height: auto;
         padding: 1em;
         z-index: 2;
@@ -46,7 +45,6 @@
         box-shadow: 0 .2em #a30170;
         margin: 5px;
         cursor: pointer;
-        
 }
 
 .video-game-button-hide {
@@ -66,12 +64,9 @@
         box-shadow: none;
     }
 
-
- 
 .start-btn:active  {
-            box-shadow: none;
-            /* //position: relative; */
-            bottom: 12.8%;
+      box-shadow: none;
+      bottom: 12.8%;
     }
 
 .endAnimation{
@@ -113,36 +108,104 @@
 
 
 @keyframes shake-vertical {
-        0%,
-        100% {
-          -webkit-transform: translateY(0);
-                  transform: translateY(0);
+  0%,
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  10%,
+  30%,
+  50%,
+  70% {
+    -webkit-transform: translateY(-8px);
+    transform: translateY(-8px);
+    color: var(--second-color);
+    width: 50%;
+    background-color: var(--fourth-color);
+    border: solid 2px var(--second-color);
+  }
+  20%,
+  40%,
+  60% {
+    -webkit-transform: translateY(8px);
+    transform: translateY(8px);
+  }
+  80% {
+    -webkit-transform: translateY(6.4px);
+    transform: translateY(6.4px);
+  }
+  90% {
+    -webkit-transform: translateY(-6.4px);
+    transform: translateY(-6.4px);
+  }
+}
+
+.div-winner-text{
+  text-transform: uppercase;
+  animation: shadows 1.2s ease-in infinite, move 1.2s ease-in infinite;
+}
+
+@keyframes shadows {
+        0% {
+          text-shadow: none;
         }
-        10%,
-        30%,
-        50%,
-        70% {
-          -webkit-transform: translateY(-8px);
-                  transform: translateY(-8px);
-                  color: var(--second-color);
-                  width: 50%;
-                  background-color: var(--fourth-color);
-                  border: solid 2px var(--second-color);
+        10% {
+          text-shadow: 3px 3px 0 var(--second-color);
         }
-        20%,
-        40%,
+        20% {
+          text-shadow: 3px 3px 0 var(--second-color),
+            6px 6px 0 var(--third-color);
+        }
+        30% {
+          text-shadow: 3px 3px 0 var(--second-color),
+            6px 6px 0 var(--third-color), 9px 9px var(--fourth-color);
+        }
+        40% {
+          text-shadow: 3px 3px 0 var(--second-color),
+            6px 6px 0 var(--third-color), 9px 9px var(--fourth-color),
+            12px 12px 0 var(--fourth-color);
+        }
+        50% {
+          text-shadow: 3px 3px 0 var(--second-color),
+            6px 6px 0 var(--third-color), 9px 9px var(--fourth-color),
+            12px 12px 0 var(--fourth-color);
+        }
         60% {
-          -webkit-transform: translateY(8px);
-                  transform: translateY(8px);
+          text-shadow: 3px 3px 0 var(--second-color),
+            6px 6px 0 var(--third-color), 9px 9px var(--fourth-color),
+            12px 12px 0 var(--fourth-color);
+        }
+        70% {
+          text-shadow: 3px 3px 0 var(--second-color),
+            6px 6px 0 var(--third-color), 9px 9px var(--fourth-color);
         }
         80% {
-          -webkit-transform: translateY(6.4px);
-                  transform: translateY(6.4px);
+          text-shadow: 3px 3px 0 var(--second-color),
+            6px 6px 0 var(--third-color);
         }
         90% {
-          -webkit-transform: translateY(-6.4px);
-                  transform: translateY(-6.4px);
+          text-shadow: 3px 3px 0 var(--second-color);
+        }
+        100% {
+          text-shadow: none;
         }
       }
       
+      @keyframes move {
+        0% {
+          transform: translate(0px, 0px);
+        }
+        40% {
+          transform: translate(-12px, -12px);
+        }
+        50% {
+          transform: translate(-12px, -12px);
+        }
+        60% {
+          transform: translate(-12px, -12px);
+        }
+        100% {
+          transform: translate(0px, 0px);
+        }
+      }
       

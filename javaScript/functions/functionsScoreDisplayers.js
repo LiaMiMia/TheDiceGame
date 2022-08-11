@@ -8,6 +8,7 @@ import { playersArray } from '../dé-3d.js';
 
 let index = 0;
 
+// fonction qui permet de changer la classe d'un block en fonction de l'index
 function setElementClassName() {
   if (index === 0) {
     playerBlock0.className = 'underTheLight';
@@ -28,19 +29,21 @@ function setIndex() {
   setElementClassName();
 }
 
-// fonction qui gére l'affichage des messages et enclencher les fonctions qui changent les scores
+// fonction qui gére l'affichage des messages
+// et appelle les méthodes qui changent les scores du joueur en cours
 function playScores(result) {
   if (result === 1 && playersArray[index].currentScore !== 0) {
     playersArray[index].resetCurrentScore();
     setIndex();
     message.innerHTML = `Pas de chance ! le dé est à 1 ! C'est au tour du joueur ${playersArray[index].name} de lancer les dés !`;
   } else if (result === 1 && playersArray[index].currentScore === 0) {
-    message.innerHTML = `Pas de chance ! le dé est à 1 ! C'est au tour du joueur ${playersArray[index].name} de lancer les dés !`;
     setIndex();
+    message.innerHTML = `Pas de chance ! le dé est à 1 ! C'est au tour du joueur ${playersArray[index].name} de lancer les dés !`;
   } else {
     playersArray[index].setCurrentScore(result);
   }
 }
+
 export {
   setIndex, playScores, index, setElementClassName,
 };

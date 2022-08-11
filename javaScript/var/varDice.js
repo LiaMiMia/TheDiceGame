@@ -3,6 +3,8 @@
 import { toRad } from '../functions/functionsDice.js';
 
 // quelques variables
+
+// stockage des angles de rotations qui donnent les chiffres 1 à 10 sur le dé
 const dicePossibilities = {
   1: [60, 45, 0],
   2: [60, 45, 270],

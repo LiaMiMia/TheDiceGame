@@ -23,8 +23,6 @@ import {
   index,
   setElementClassName,
 } from './functions/functionsScoreDisplayers.js';
-// import de la fonction winner
-// import winner from './functions/functionsWinner.js';
 
 // import des variables
 import {
@@ -60,6 +58,8 @@ import {
   cameraZPosition,
   animationDuration,
   DeTarget,
+  musicChing,
+  musicWin,
 } from './var/varOthers.js';
 
 // gestion de la camera
@@ -147,12 +147,11 @@ commencer.addEventListener('click', () => {
 });
 
 function winner(id) {
-  if (Number(playersArray[id].globalScore) >= 100) {
+  if (Number(playersArray[id].globalScore) >= 10) {
     const GlobalScoreHtml = document.getElementById(`scoreGlobal${id}`);
     GlobalScoreHtml.className = 'endAnimation';
-    const music = new Audio('https://github.com/LiaMiMia/TheDiceGame/blob/main/sounds/success-fanfare-trumpets-6185.mp3?raw=true');
-    music.play();
-    music.loop = false;
+    musicWin.play();
+    musicWin.loop = false;
     setTimeout(() => {
       body.innerHTML = `<div class="div-winner"><div class="div-winner-text">Le joueur ${playersArray[id].name} a gagné !</div> <button id="rejouer" onClick="window.location.href=window.location.href" class="start-btn">Rejouer</button></div>`;
     }, 3000);
@@ -161,13 +160,23 @@ function winner(id) {
   return false;
 }
 
+// function holdDisabled(id, finalResult) {
+//   const round = document.getElementById(`ScoreTour${id}`);
+//   if (Number(round) !== finalResult || Number(round) !== 0) {
+//     hold.disabled = true;
+//     return true;
+//   }
+//   hold.disabled = false;
+//   return false;
+// }
+
 // gestion de l'animation du(des) dé(s) ;)
 
 deEvent.addEventListener('click', () => {
   const timeToStart = Date.now();
   const newSort = deFace();
   const timeToFinish = timeToStart + animationDuration;
-
+  hold.disabled = true;
   formeVisible(forme);
   formeInvisible(dice);
   setRotation(
@@ -176,8 +185,6 @@ deEvent.addEventListener('click', () => {
     dicePossibilities[newSort][2],
     dice,
   );
-
-  playScores(newSort);
 
   function startAnimation() { // ne pas déplacer car dépend de timeToFinish et timeToStart
     const now = Date.now();
@@ -204,7 +211,7 @@ deEvent.addEventListener('click', () => {
     }
   }
   startAnimation();
-
+  setTimeout(() => { playScores(newSort); }, animationDuration);
   musicAnim.play();
   forme.position.y = 0;
 });
@@ -214,14 +221,13 @@ hold.addEventListener('click', () => {
   if (Number(playersArray[index].currentScore) !== 0) {
     playersArray[index].setGlobalScore();
     playersArray[index].resetCurrentScore();
-    const music = new Audio('https://github.com/LiaMiMia/TheDiceGame/blob/main/sounds/cha-ching.mp3?raw=true');
-    music.play();
+    musicChing.play();
     // music.loop =false;
     winner(index);
     if (winner(index) === false) {
       setIndex();
       // setElementId();
-      message.innerHTML = `C'est au tour du joueur ${playersArray[index].name} de lancer les dés !`;
+      message.innerHTML = `C'est au tour du joueur ${playersArray[index].name} de lancer le dé !`;
     }
   } else {
     message.innerHTML = `${playersArray[index].name} Vous devez jouer au moins une fois le dé. C'est à votre tour !`;

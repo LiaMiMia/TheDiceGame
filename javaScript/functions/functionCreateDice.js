@@ -8,6 +8,7 @@ import {
   from '../var/varOthers.js';
 import { toRad } from './functionsDice.js';
 
+// fonction qui crée les dés
 function createDice() {
   // à ce stade on a un écran noir basta la base de la scene
   // les points

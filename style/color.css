@@ -1,9 +1,3 @@
-/* bleu canard: #4991AC
- beleu clair : #d3f6e9 
- rose pétant : #dc0095
-
-*/
-
 :root {
     --main-color: #4991AC;
     --third-color: #d3f6e9;
@@ -15,20 +9,15 @@
     background-color: var(--main-color);
     color: var(--third-color); 
     border: solid var(--second-color) 3px;
-  }
+}
 
 .BackToShadow{
     background-color: var(--third-color);
     color: var(--main-color);
-    }
+}
 
 .affichages-dynamiques{
     border: solid var(--second-color) 3px;
     color: var(--main-color);
     font-weight: bold;
-    }
-
-    /* #hold{
-        background-color: var(--second-color);
-        color: var(--third-color);
-    } */
+}

@@ -1,4 +1,15 @@
 /* mise en place générale */
+*{
+    font-family: 'Press Start 2p';
+    text-align: center;
+}
+
+body{
+    margin:0;
+    padding: 0;
+    background-color: #fff5d2;
+}
+
 html, body{
     height: 100%;
     width: 100%;
@@ -15,27 +26,8 @@ main{
     
 }
 
-#NomP2{
-    margin-bottom: 20px;
-}
-
-#NomP1, #NomP2{
-    width: 60%;
-    height: 10%;
-    border-radius: 10% 10% 10% 10% / 10% 10% 10% 10%;
-}
-
-*{
-    font-family: 'Press Start 2p';
-    text-align: center;
-    
-    /* border: solid black 1px; */
-}
-
-body{
+h3{
     margin:0;
-    padding: 0;
-    
 }
 
 h2, h3, p{
@@ -44,8 +36,20 @@ h2, h3, p{
 }
 
 a{
-    /* text-decoration: none; */
     display: flex;
+    object-fit: contain;
+    text-decoration: none;
+    display: flex;
+}
+
+#NomP2{
+    margin-bottom: 20px;
+}
+
+#NomP1, #NomP2{
+    width: 60%;
+    height: 10%;
+    border-radius: 10% 10% 10% 10% / 10% 10% 10% 10%;
 }
 
 a:hover{
@@ -68,6 +72,7 @@ canvas{
     height: 100%;
     box-sizing: border-box;
 }
+
 /* disposition des éléments les uns par rapport aux autres */
 /* hauteur des div principales  */
 .divHB{
@@ -90,9 +95,6 @@ canvas{
     height: 40%;
 }
 
-body{
-    background-color: #fff5d2;
-}
 .affichages-dynamiques{
     z-index: 2;
     background: #fff5d2;
@@ -151,15 +153,15 @@ body, .affichages-dynamiques, .div-winner{
 
 .div-winner{
     color: var(--main-color); 
+    font-size: 24px;
+    line-height: 40px;
+    margin: 10px;
+    height: 100%;
+    justify-content: space-around;
 }
 
 .playerBlock{
     padding: 10px;
-}
-
-.div-winner{
-    height: 100%;
-    justify-content: space-around;
 }
 
 #playerName{
@@ -168,15 +170,11 @@ body, .affichages-dynamiques, .div-winner{
     margin-bottom: 50px;
 }
 
-h3{
-    margin:0;
-}
-
 #message{
     height: 100%;
     width: 100%; 
     font-family: 'Lato', sans-serif;
-    font-size: 25px;
+    font-size: 22px;
 }
 
 .score{
@@ -188,7 +186,6 @@ h3{
     align-items: center;
     margin-left: auto;
     margin-right: auto;
-   
 }
 
 #scoreGlobal0, #scoreGlobal1{
@@ -206,19 +203,6 @@ h3{
     align-content: center;
     justify-content: space-evenly;
 }
-
-/* (A) WRONG ORIENTATION - SHOW MESSAGE HIDE CONTENT */
-/* @media only screen and (orientation:landscape) {
-    #turn { display:block; }
-    .container { display:none; }
-  }
-   
-  /* (B) CORRECT ORIENTATION - SHOW CONTENT HIDE MESSAGE */
-  /*
-  @media only screen and (orientation:portrait) {
-    #turn { display:none; }
-    .container { display:flex; }
-  } */
 
 
 

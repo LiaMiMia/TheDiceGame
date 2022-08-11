@@ -1,12 +1,7 @@
 body{
     font-size: smaller;
 }
-p, ul, li{
-    font-family: 'Lato', sans-serif;
-    font-weight: bold;
-    font-size: 20px;
-    line-height: 25px;
-}
+
 main{
     background-color: var(--main-color);
     color: var(--third-color);
@@ -20,21 +15,18 @@ main{
     flex-direction: column;
     margin-top: auto;
     margin-bottom: auto;
+}
 
+p, ul, li{
+    font-family: 'Lato', sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 25px;
 }
 
 ul{
     list-style-type: none;
 }
-
-.start-btn{
-    border-radius: 7px;
-    font-family: 'Press Start 2p';
-    justify-content: space-around;
-    height: auto;
-    padding: 1em;
-    z-index: 2;
-    }
 
 .start-btn{
     text-shadow: -1px -1px var(--main-color-), 1px 1px white;
@@ -46,6 +38,12 @@ ul{
     box-shadow: 0 .2em #a30170;
     margin: 5px;
     cursor: pointer;
+    border-radius: 7px;
+    font-family: 'Press Start 2p';
+    justify-content: space-around;
+    height: auto;
+    padding: 1em;
+    z-index: 2;
     }
 
 #retour{
@@ -54,4 +52,4 @@ ul{
     bottom: 5%;
     left: 35%;
     text-decoration: none;
-}
+    }

@@ -1,34 +1,35 @@
+/* eslint-disable import/no-unresolved */
+/* eslint-disable import/extensions */
 /* eslint-disable no-param-reassign */
-// car c'est le but de la fonction de modifier le html ...
+// je 'disable' ce paramètre car c'est le but de ces fonction de changer le dom
 // le compteur
-function animateValue(obj, start, end, duration) {
+
+import { hold } from '../var/varDomEl.js';
+
+function animateValueIncre(obj, start, end, duration) {
   const step = duration / (end - start);
   let html = start;
-  let startAnim;
-
-  if (end === 0) {
-    if (obj.innerHTML !== '0') {
-      startAnim = setInterval(() => {
-        html -= 1;
-        obj.innerHTML = html;
-
-        if (html <= 0) {
-          clearInterval(startAnim);
-        }
-      }, step);
+  const startAnim = setInterval(() => {
+    html += 1;
+    obj.innerHTML = html;
+    if (html >= end) {
+      hold.disabled = false;
+      clearInterval(startAnim);
     }
-  } else {
-    startAnim = setInterval(() => {
-      html += 1;
-      // eslint-disable-next-line no-param-reassign
-      obj.innerHTML = html;
-
-      if (html >= end) {
-        clearInterval(startAnim);
-      }
-    }, step);
-  }
+  }, step);
 }
 
-// import { animateValue } from 'functions/functionsCounteur.js';
-export default animateValue;
+function animateValueDecre(obj, start, end, duration) {
+  const step = duration / (start - end);
+  let html = start;
+  const startAnim = setInterval(() => {
+    html -= 1;
+    obj.innerHTML = html;
+    if (html <= 0) {
+      hold.disabled = false;
+      clearInterval(startAnim);
+    }
+  }, step);
+}
+
+export { animateValueIncre, animateValueDecre };

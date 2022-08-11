@@ -16,5 +16,8 @@ const renderer = new THREE.WebGLRenderer({ alpha: true });
 const light = new THREE.PointLight(0xFFFFFF, 1, 10000);
 
 export {
-  scene, camera, renderer, light,
+  scene,
+  camera,
+  renderer,
+  light,
 };
