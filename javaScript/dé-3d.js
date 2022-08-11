@@ -147,7 +147,7 @@ commencer.addEventListener('click', () => {
 });
 
 function winner(id) {
-  if (Number(playersArray[id].globalScore) >= 10) {
+  if (Number(playersArray[id].globalScore) >= 100) {
     const GlobalScoreHtml = document.getElementById(`scoreGlobal${id}`);
     GlobalScoreHtml.className = 'endAnimation';
     musicWin.play();
